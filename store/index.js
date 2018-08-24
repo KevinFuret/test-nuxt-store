@@ -6,12 +6,12 @@ const store = new Vuex.Store({
   },
   mutations: {
     set(state, data){
-      state.menu = data.items
+      state.menu = data
     }
   }, 
   actions: {
     async nuxtServerInit ({ commit }, { app }) {
-      const data = await app.$axios.get("https://dev.lesdeuxvagues.com/api/wp-json/wp-api-menus/v2/menus/2")
+      const data = await app.$axios.get("https://jsonplaceholder.typicode.com/todos")
       commit('set', response.data)
       console.log(response.data)
     }
