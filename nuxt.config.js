@@ -41,6 +41,9 @@ module.exports = {
 
   axios: {
     // proxyHeaders: false
+    headers: {
+      'Content-Type': 'application/json'
+    }
   }
 }
 
